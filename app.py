@@ -11,7 +11,7 @@ def index():
 
 @app.route('/mike')
 def mike():
-    return render_template('mike.html', pageTitle='About Mike')
+    return render_template('about.html', pageTitle='About ')
 
 @app.route('/add_friend', methods=['GET', 'POST'])
 def add_friend():
