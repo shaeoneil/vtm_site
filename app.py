@@ -9,12 +9,12 @@ friend_list = [{"name": "Mike Colbert", "email":"mike@mike.com" } ]
 def index():
     return render_template('index.html', pageTitle='Mike\'s Friends', friends = friend_list)
 
-@app.route('/mike')
-def mike():
+@app.route('/about')
+def about():
     return render_template('about.html', pageTitle='About ')
 
-@app.route('/add_friend', methods=['GET', 'POST'])
-def add_friend():
+@app.route('/estimate', methods=['GET', 'POST'])
+def estimate():
     if request.method == 'POST':
         form = request.form
         fname = form['fname']
