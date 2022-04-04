@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', pageTitle='Shae\'s Friends')
+    return render_template('index.html', pageTitle='VTM Site')
 
 @app.route('/about')
 def about():
@@ -18,8 +18,17 @@ def estimate():
         form = request.form
         radius = float(form['radius'])
         height = float(form['height'])
-        quote = radius+height
-        return render_template('estimate.html', pageTitle='Estimate', estimate=quote)
+        top_area=3.14 * radius**2
+        side_area=2*3.14*radius*height
+        total_area = top_area + side_area
+        total_sqft = total_area / 144
+        material_cost = 25 
+        total_material_cost = total_sqft * material_cost
+        labor_cost = 15
+        total_labor_cost = labor_cost * total_sqft
+        total_cost_estimate = total_material_cost + total_labor_cost
+        total_cost_estimate=str(total_cost_estimate)
+    return render_template('estimate.html', pageTitle='Estimate', estimate=total_cost_estimate)
     return render_template('estimate.html', pageTitle='Estimate',)
 if __name__ == '__main__':
     app.run(debug=True)
