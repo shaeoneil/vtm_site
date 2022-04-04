@@ -58,3 +58,6 @@ input[readonly] {
     text-align: center;
   }
 
+cost{
+  text-shadow: yellow;
+}
