@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock%}</title>
+    <title>{{ pageTitle }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
 <body>
-    <div>
-        <h1>Vertical Tank Maintenance</h1>
-        <img src="/Users/shaeoneil/Documents/GitHub/vtm_site/above_ground_vertical_tanks.jpg", alt="vtm", class="center">
-        <hr>
-        <br>
-        
+
+    <h1>Vertical Tank Maintenance</h1>
+
+    <p>
+        <a href="http://127.0.0.1:5000">Home</a>
+        <a href="http://127.0.0.1:5000/about">About</a>
+        <a href="http://127.0.0.1:5000/estimate">Estimate</a>
+    </p>
+    <hr/>
         {% block body %}
 
         {% endblock %}
 
-    </div>
 </body>
 </html>
 

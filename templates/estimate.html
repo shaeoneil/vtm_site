@@ -1,9 +1,10 @@
 
 {% block body %}
 
-<img src="/Users/shaeoneil/Documents/GitHub/vtm_site/above_ground_vertical_tanks.jpg", alt="vtm", class="center">
+<img src="{{ url_for('static', filename='images/above_ground_vertical_tanks.jpg') }}">
 <hr>
 <h1> Estimate</h1>
+<p>Calculate your estimated cost.</p>
 <hr />
 <h3> Recieve Estimate: </h3>
 <form action="/estimate" method="POST">
