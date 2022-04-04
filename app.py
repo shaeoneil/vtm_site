@@ -25,6 +25,9 @@ def estimate():
         return redirect(url_for('index'))
     return redirect(url_for('index'))
     
+@app.route('/base')
+def base():
+    return render_template('base.html', pageTitle=' Vertical Tank Maintenance')
 
 if __name__ == '__main__':
     app.run(debug=True)
