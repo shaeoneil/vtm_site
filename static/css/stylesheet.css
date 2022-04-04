@@ -58,6 +58,6 @@ input[readonly] {
     text-align: center;
   }
 
-cost{
-  text-shadow: yellow;
-}
+  span {
+    content: "\0024";
+  }
